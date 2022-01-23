@@ -23,7 +23,8 @@
     "sharp": "^0"
   },
   "np": {
-    "branch": "main"
+    "branch": "main",
+    "tests": false
   },
   "publishConfig": {
     "access": "public",
