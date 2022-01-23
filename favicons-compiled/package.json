@@ -1,0 +1,44 @@
+{
+  "name": "favicons-compiled",
+  "description": "Compiled favicons package using @vercel/ncc 🏄‍♂️",
+  "version": "0.0.0",
+  "author": "Griko Nibras <griko@koding.ninja>",
+  "repository": "https://github.com/kodingdotninja/favicons-compiled.git",
+  "homepage": "https://github.com/kodingdotninja/favicons-compiled",
+  "bugs": "https://github.com/kodingdotninja/favicons-compiled/issues",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "# general commands": "--------------------------------------------------",
+    "build": "yarn build:src && yarn build:types",
+    "build:src": "ncc build ../node_modules/favicons/dist/index.js -a -e sharp -m -o dist/. && shx rm -rf dist/package.json",
+    "build:types": "shx cp ../node_modules/@types/favicons/index.d.ts dist/.",
+    "clean": "shx rm -rf dist/*",
+    "lint": "eslint --fix \"*.js\"",
+    "#": "-------------------------------------------------------------------"
+  },
+  "dependencies": {
+    "sharp": "^0"
+  },
+  "np": {
+    "branch": "main"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts"
+  ],
+  "keywords": [
+    "favicon",
+    "favicons",
+    "favicons-compiled",
+    "generator",
+    "ico"
+  ],
+  "license": "MIT"
+}
