@@ -1,0 +1,45 @@
+{
+  "name": "favicons-compiled-cli",
+  "description": "Generate favicons via CLI using favicons-compiled 🏄‍♂️",
+  "version": "0.0.0",
+  "author": "Griko Nibras <griko@koding.ninja>",
+  "repository": "https://github.com/kodingdotninja/favicons-compiled.git",
+  "homepage": "https://github.com/kodingdotninja/favicons-compiled",
+  "bugs": "https://github.com/kodingdotninja/favicons-compiled/issues",
+  "bin": {
+    "favicons-compiled": "index.mjs"
+  },
+  "type": "module",
+  "scripts": {
+    "# general commands": "--------------------------------------------------",
+    "lint": "eslint --fix \"*.js\"",
+    "#": "-------------------------------------------------------------------"
+  },
+  "dependencies": {
+    "favicons-compiled": "^0",
+    "sharp": "^0"
+  },
+  "np": {
+    "branch": "main",
+    "tests": false
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "*.js",
+    "*.cjs",
+    "*.mjs",
+    "*.d.ts"
+  ],
+  "keywords": [
+    "favicon",
+    "favicons",
+    "favicons-compiled",
+    "favicons-compiled-cli",
+    "generator",
+    "ico"
+  ],
+  "license": "MIT"
+}

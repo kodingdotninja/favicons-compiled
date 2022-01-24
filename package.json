@@ -2,8 +2,9 @@
   "name": "@kodingdotninja/favicons-compiled",
   "version": "0.0.0",
   "workspaces": [
+    "bench",
     "favicons-compiled",
-    "bench"
+    "favicons-compiled-cli"
   ],
   "type": "module",
   "scripts": {
@@ -68,6 +69,7 @@
       "eslint-config-kdnj"
     ],
     "ignorePatterns": [
+      "arg@5.0.1.min.cjs",
       "node_modules"
     ],
     "root": true
