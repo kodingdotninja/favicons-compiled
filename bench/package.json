@@ -6,11 +6,12 @@
     "# general commands": "--------------------------------------------------",
     "clean": "shx rm -rf dist/*",
     "lint": "eslint --fix \"*.js\"",
-    "test": "node test.js",
+    "test": "favicons-compiled -i icon.png -c config.json -o dist/",
     "#": "-------------------------------------------------------------------"
   },
   "dependencies": {
-    "favicons-compiled": "*"
+    "favicons-compiled": "*",
+    "favicons-compiled-cli": "*"
   },
   "private": true
 }

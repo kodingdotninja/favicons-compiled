@@ -1,0 +1,17 @@
+{
+  "path": "/",
+  "appName": "favicons-compiled",
+  "appShortName": "favicons-compiled",
+  "appDescription": "test favicons-compiled build",
+  "developerName": "favicons-compiled",
+  "developerURL": "https://github.com/kodingdotninja/favicons-compiled",
+  "background": "#171717",
+  "theme_color": "#171717",
+  "icons": {
+    "android": true,
+    "appleIcon": true,
+    "appleStartup": true,
+    "favicons": true,
+    "windows": true
+  }
+}
