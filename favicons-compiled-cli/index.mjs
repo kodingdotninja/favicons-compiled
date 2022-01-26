@@ -41,13 +41,13 @@ async function cli() {
       throw new arg.ArgError("missing required argument: --input", "ARG_REQUIRED");
     }
 
-    const inputPath = cwd(args["--input"]);
+    const inputPath = path.resolve(args["--input"]);
 
     const config = args["--config"]
-      ? await fs.readFile(cwd(args["--config"]), "utf-8").then((file) => JSON.parse(file))
+      ? await fs.readFile(path.resolve(args["--config"]), "utf-8").then((file) => JSON.parse(file))
       : {};
 
-    const outputPath = cwd(args["--output"] ?? "out");
+    const outputPath = path.resolve(args["--output"] ?? "out");
     const writePath = (...rest) => path.join(outputPath, ...rest);
     await fs.mkdir(outputPath).catch(() => {});
 
@@ -66,10 +66,6 @@ async function cli() {
     console.error(String(error));
     process.exit(1);
   }
-}
-
-export function cwd(...rest) {
-  return path.join(process.cwd(), ...rest);
 }
 
 export function htmlToReactString(html) {
