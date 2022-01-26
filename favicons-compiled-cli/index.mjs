@@ -8,6 +8,16 @@ import favicons from "favicons-compiled";
 import * as fs from "fs/promises";
 import * as path from "path";
 
+const halp = `Usage: favicons-compiled [options]
+
+Options:
+  -i, --input     Image input path
+  -c, --config    Favicon configuration file
+  -o, --output    Generated assets destination (defaults to ./out)
+
+https://github.com/kodingdotninja/favicons-compiled
+`;
+
 async function cli() {
   try {
     const args = arg({
@@ -17,7 +27,15 @@ async function cli() {
       "-i": "--input",
       "-c": "--config",
       "-o": "--output",
+
+      "--help": String,
+      "-h": "--help",
     });
+
+    if (args["--help"]) {
+      console.log(halp);
+      return;
+    }
 
     if (!args["--input"]) {
       throw new arg.ArgError("missing required argument: --input", "ARG_REQUIRED");
