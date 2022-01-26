@@ -69,7 +69,7 @@
       "eslint-config-kdnj"
     ],
     "ignorePatterns": [
-      "arg@5.0.1.min.cjs",
+      "*.min.cjs",
       "node_modules"
     ],
     "root": true
