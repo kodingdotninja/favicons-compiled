@@ -17,6 +17,7 @@
     "prepare": "husky install",
     "purge": "shx rm -rf node_modules/.cache/ favicons-compiled/.turbo/ bench/.turbo/",
     "release": "yarn workspace favicons-compiled np",
+    "release:cli": "yarn workspace favicons-compiled-cli np",
     "test": "turbo run test",
     "#": "-------------------------------------------------------------------"
   },
