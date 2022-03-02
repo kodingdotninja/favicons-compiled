@@ -31,7 +31,7 @@ Compiled [`favicons`](https://github.com/itgalaxy/favicons) package using [`@ver
 The latest build of `favicons-compiled` is using these package versions:
 
 - [`@types/favicons@6.2.2`](https://www.npmjs.com/package/@types/favicons/v/6.2.2)
-- [`favicons@7.0.0-beta.1`](https://www.npmjs.com/package/favicons/v/7.0.0-beta.1)
+- [`favicons@7.0.0-beta.3`](https://www.npmjs.com/package/favicons/v/7.0.0-beta.3)
 - [`sharp@^0`](https://www.npmjs.com/package/sharp)
 
 View the [root `package.json`](./package.json) for more details.

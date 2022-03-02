@@ -54,7 +54,7 @@
   "dependencies": {
     "@types/favicons": "6.2.2",
     "@vercel/ncc": "^0",
-    "favicons": "7.0.0-beta.1"
+    "favicons": "7.0.0-beta.3"
   },
   "devDependencies": {
     "eslint": "^8",
