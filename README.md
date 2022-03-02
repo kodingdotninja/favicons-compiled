@@ -80,8 +80,8 @@ favicons-compiled \
 ## Roadmap
 
 - [x] Compile and test `favicons`
-- [ ] Compile `favicons` with `sharp`
-- [ ] Dedupe dependencies with yarn resolutions
+- [x] ~~Compile `favicons` with `sharp`~~
+- [x] ~~Dedupe dependencies with yarn resolutions~~
 - [ ] Merge compiled package with upstream
 
 ## License
