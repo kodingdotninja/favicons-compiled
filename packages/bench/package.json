@@ -1,0 +1,14 @@
+{
+  "name": "bench",
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "shx rm -rf dist/*",
+    "test": "favicons-compiled --input icon.png --config config.json --output dist/ --html dist/meta-tags.html --jsx dist/meta-tags.jsx"
+  },
+  "dependencies": {
+    "favicons-compiled": "*",
+    "favicons-compiled-cli": "*",
+    "favicons-compiled-src": "*"
+  },
+  "private": true
+}

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://turborepo.org/schema.json",
   "baseBranch": "origin/main",
   "globalDependencies": ["yarn.lock"],
   "pipeline": {
@@ -8,9 +9,6 @@
     },
     "clean": {
       "cache": false
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
     },
     "test": {
       "dependsOn": ["^build"]

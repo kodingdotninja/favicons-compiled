@@ -30,8 +30,7 @@ Compiled [`favicons`](https://github.com/itgalaxy/favicons) package using [`@ver
 
 The latest build of `favicons-compiled` is using these package versions:
 
-- [`@types/favicons@6.2.2`](https://www.npmjs.com/package/@types/favicons/v/6.2.2)
-- [`favicons@7.0.0-beta.3`](https://www.npmjs.com/package/favicons/v/7.0.0-beta.3)
+- [`favicons@7.0.0-beta.4`](https://www.npmjs.com/package/favicons/v/7.0.0-beta.3)
 - [`sharp@^0`](https://www.npmjs.com/package/sharp)
 
 View the [root `package.json`](./package.json) for more details.
@@ -62,20 +61,24 @@ npx favicons-compiled-cli -i icon.png -o out/
 
 # with global install and custom configuration
 yarn global add favicons-compiled-cli
-favicons-compiled -i icon.png -c config.json -o out/
+favicons-compiled-cli -i icon.png -c config.json -o public/assets/
 
 # with custom configration and long arguments
-favicons-compiled \
+favicons-compiled-cli \
   --input icon.png \
   --config config.json \
-  --output out/
+  --output public/assets/ \
+  --html public/meta-tags.html \
+  --jsx components/meta-tags.jsx
 ```
 
 **Arguments**
 
-- `--input` or `-i`: favicon image source
-- `--config` or `-c`: [`favicons` configuration options](https://github.com/itgalaxy/favicons)
-- `--output` or `-o`: directory to save generated assets (default to `./out`)
+- `--input` or `-i`: Image input path (required)
+- `--config` or `-c`: [JSON configuration file](https://github.com/itgalaxy/favicons)
+- `--output` or `-o`: Generated assets destination (defaults to ./out)
+- `--html`: Path to export HTML meta tags (e.g. favicons-meta-tags.html)
+- `--jsx`: Path to export JSX component meta tags (e.g. favicons-meta-tags.jsx)
 
 ## Roadmap
 

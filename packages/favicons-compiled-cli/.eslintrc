@@ -1,0 +1,5 @@
+{
+  "extends": ["@project/eslint-config"],
+  "ignorePatterns": ["lib/arg.js", "node_modules"],
+  "root": true
+}

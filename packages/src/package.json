@@ -1,0 +1,24 @@
+{
+  "name": "favicons-compiled-src",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:mjs && yarn build:types",
+    "build:cjs": "ncc build ../../node_modules/favicons/dist/index.cjs --asset-builds --external sharp --minify --out ../favicons-compiled/dist/",
+    "build:mjs": "ncc build ../../node_modules/favicons/dist/index.mjs --asset-builds --external sharp --minify --out ../favicons-compiled/dist/",
+    "build:types": "shx cp ../../node_modules/favicons/dist/index.d.ts ../favicons-compiled/dist/"
+  },
+  "dependencies": {
+    "sharp": "^0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@project/eslint-config"
+    ],
+    "ignorePatterns": [
+      "node_modules"
+    ],
+    "root": true
+  },
+  "prettier": "@project/prettier-config",
+  "license": "MIT"
+}

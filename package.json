@@ -1,47 +1,37 @@
 {
   "name": "@kodingdotninja/favicons-compiled",
   "version": "0.0.0",
-  "packageManager": "yarn@1.22.17",
+  "packageManager": "yarn@1.22.18",
   "workspaces": [
-    "bench",
-    "favicons-compiled",
-    "favicons-compiled-cli"
+    "packages/*"
   ],
-  "type": "module",
   "scripts": {
-    "# general commands": "--------------------------------------------------",
-    "build": "turbo run build --scope=favicons-compiled --include-dependencies --no-deps",
+    "build": "turbo run build --scope=favicons-compiled-src --include-dependencies --no-deps",
     "clean": "turbo run clean",
     "deduplicate": "npx yarn-deduplicate && yarn install",
     "favicons": "yarn workspace favicons-compiled",
     "lint": "turbo run lint",
     "prepare": "husky install",
-    "purge": "shx rm -rf node_modules/.cache/ favicons-compiled/.turbo/ bench/.turbo/",
-    "release": "yarn workspace favicons-compiled np",
-    "release:cli": "yarn workspace favicons-compiled-cli np",
-    "test": "turbo run test",
-    "#": "-------------------------------------------------------------------"
+    "release": "yarn workspace favicons-compiled publish",
+    "release:cli": "yarn workspace favicons-compiled-cli publish",
+    "test": "turbo run test"
   },
   "dependencies": {
-    "@types/favicons": "6.2.2",
     "@vercel/ncc": "^0",
-    "favicons": "7.0.0-beta.3"
+    "favicons": "7.0.0-beta.4"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-kdnj": "^2",
     "husky": "^7",
     "lint-staged": "^12",
-    "np": "^7",
+    "postinstall-postinstall": "^2",
     "shx": "^0",
     "turbo": "^1"
   },
   "eslintConfig": {
     "extends": [
-      "eslint-config-kdnj"
+      "@project/eslint-config"
     ],
     "ignorePatterns": [
-      "*.min.cjs",
       "node_modules"
     ],
     "root": true
@@ -49,17 +39,8 @@
   "lint-staged": {
     "*.{json,md}": [
       "prettier --write"
-    ],
-    "*.{js,ts}": [
-      "eslint --fix"
     ]
   },
-  "prettier": {
-    "endOfLine": "auto",
-    "printWidth": 120,
-    "semi": true,
-    "singleQuote": false,
-    "trailingComma": "all"
-  },
+  "prettier": "@project/prettier-config",
   "private": true
 }
