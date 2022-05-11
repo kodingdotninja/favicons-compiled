@@ -1,7 +1,7 @@
 {
   "name": "favicons-compiled",
   "description": "Compiled favicons package using @vercel/ncc 🏄‍♂️",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Griko Nibras <griko@koding.ninja>",
   "repository": "https://github.com/kodingdotninja/favicons-compiled.git",
   "homepage": "https://github.com/kodingdotninja/favicons-compiled",
@@ -14,10 +14,9 @@
     "sharp": "^0"
   },
   "files": [
-    "*.js",
-    "*.cjs",
-    "*.mjs",
-    "*.d.ts"
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.d.ts"
   ],
   "keywords": [
     "favicon",
