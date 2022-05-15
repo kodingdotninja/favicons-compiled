@@ -8,6 +8,8 @@
     "build:types": "shx cp ../../node_modules/favicons/dist/index.d.ts ../favicons-compiled/dist/"
   },
   "dependencies": {
+    "@vercel/ncc": "^0",
+    "favicons": "7.0.0-beta.4",
     "sharp": "^0"
   },
   "eslintConfig": {
