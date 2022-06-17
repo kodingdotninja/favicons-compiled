@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --scope=favicons-compiled-src --include-dependencies --no-deps",
+    "build": "turbo run build --scope=favicons-compiled-src",
     "clean": "turbo run clean",
     "deduplicate": "npx yarn-deduplicate && yarn install",
     "favicons": "yarn workspace favicons-compiled",
@@ -17,8 +17,9 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "husky": "^7",
-    "lint-staged": "^12",
+    "husky": "^8",
+    "lint-staged": "^13",
+    "npm-run-all2": "^6",
     "postinstall-postinstall": "^2",
     "shx": "^0",
     "turbo": "^1"
