@@ -1,7 +1,7 @@
 {
   "name": "favicons-compiled-cli",
   "description": "Generate favicons via CLI using favicons-compiled 🏄‍♂️",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Griko Nibras <griko@koding.ninja>",
   "repository": "https://github.com/kodingdotninja/favicons-compiled.git",
   "homepage": "https://github.com/kodingdotninja/favicons-compiled",
@@ -10,7 +10,7 @@
     "favicons-compiled": "index.js"
   },
   "dependencies": {
-    "favicons-compiled": "0.0.5",
+    "favicons-compiled": "*",
     "sharp": "^0"
   },
   "files": [
