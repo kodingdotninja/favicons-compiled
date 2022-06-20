@@ -1,0 +1,333 @@
+{
+  "$ref": "#/definitions/Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Dictionary": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "IconSize": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      },
+      "required": ["width", "height"],
+      "additionalProperties": false
+    },
+    "IconOptions": {
+      "type": "object",
+      "properties": {
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IconSize"
+          }
+        },
+        "offset": {
+          "type": "number"
+        },
+        "background": {
+          "type": ["string", "boolean"]
+        },
+        "transparent": {
+          "type": "boolean"
+        },
+        "rotate": {
+          "type": "boolean"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "pixelArt": {
+          "type": "boolean"
+        }
+      },
+      "required": ["sizes", "transparent", "rotate"],
+      "additionalProperties": false
+    },
+    "FileOptions": {
+      "type": "object",
+      "properties": {
+        "manifestFileName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ShortcutOptions": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "icon": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "#/definitions/Buffer"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Buffer"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["name", "url"],
+      "additionalProperties": false
+    },
+    "Buffer": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      },
+      "properties": {
+        "BYTES_PER_ELEMENT": {
+          "type": "number"
+        },
+        "buffer": {
+          "$ref": "#/definitions/ArrayBufferLike"
+        },
+        "byteLength": {
+          "type": "number"
+        },
+        "byteOffset": {
+          "type": "number"
+        },
+        "length": {
+          "type": "number"
+        }
+      },
+      "required": ["BYTES_PER_ELEMENT", "buffer", "byteLength", "byteOffset", "length"],
+      "description": "Raw data is stored in instances of the Buffer class. A Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized. Valid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'"
+    },
+    "Uint8Array": {
+      "type": "object",
+      "properties": {
+        "BYTES_PER_ELEMENT": {
+          "type": "number"
+        },
+        "buffer": {
+          "$ref": "#/definitions/ArrayBufferLike"
+        },
+        "byteLength": {
+          "type": "number"
+        },
+        "byteOffset": {
+          "type": "number"
+        },
+        "length": {
+          "type": "number"
+        }
+      },
+      "required": ["BYTES_PER_ELEMENT", "buffer", "byteLength", "byteOffset", "length"],
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "ArrayBufferLike": {
+      "$ref": "#/definitions/ArrayBuffer"
+    },
+    "ArrayBuffer": {
+      "type": "object",
+      "properties": {
+        "byteLength": {
+          "type": "number"
+        }
+      },
+      "required": ["byteLength"],
+      "additionalProperties": false
+    },
+    "Application": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "OutputOptions": {
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "boolean"
+        },
+        "files": {
+          "type": "boolean"
+        },
+        "html": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Schema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "appName": {
+          "type": "string"
+        },
+        "appShortName": {
+          "type": "string"
+        },
+        "appDescription": {
+          "type": "string"
+        },
+        "developerName": {
+          "type": "string"
+        },
+        "developerURL": {
+          "type": "string"
+        },
+        "dir": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "theme_color": {
+          "type": "string"
+        },
+        "appleStatusBarStyle": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "orientation": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "start_url": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "pixel_art": {
+          "type": "boolean"
+        },
+        "loadManifestWithCredentials": {
+          "type": "boolean"
+        },
+        "manifestRelativePaths": {
+          "type": "boolean"
+        },
+        "manifestMaskable": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "#/definitions/Buffer"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Buffer"
+              }
+            }
+          ]
+        },
+        "preferRelatedApplications": {
+          "type": "boolean"
+        },
+        "relatedApplications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Application"
+          }
+        },
+        "icons": {
+          "$ref": "#/definitions/Dictionary%3C(IconOptions%7Cboolean%7Cstring%5B%5D)%3E"
+        },
+        "files": {
+          "$ref": "#/definitions/Dictionary%3CFileOptions%3E"
+        },
+        "shortcuts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShortcutOptions"
+          }
+        },
+        "output": {
+          "$ref": "#/definitions/OutputOptions"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Dictionary<(IconOptions|boolean|string[])>": {
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/IconOptions"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "Dictionary<FileOptions>": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/FileOptions"
+      }
+    }
+  }
+}
