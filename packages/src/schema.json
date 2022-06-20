@@ -195,6 +195,10 @@
     "Schema": {
       "type": "object",
       "properties": {
+        "$schema": {
+          "default": "https://koding.ninja/favicons-compiled/schema.json",
+          "type": "string"
+        },
         "path": {
           "type": "string"
         },
