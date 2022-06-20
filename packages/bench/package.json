@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "shx rm -rf dist/*",
-    "test": "favicons-compiled --input icon.png --config config.json --output dist/ --html dist/meta-tags.html --jsx dist/meta-tags.jsx"
+    "test": "favicons-compiled --input icon.png --config config.json --output dist/ --astro dist/meta-tags.astro --html dist/meta-tags.html --jsx dist/meta-tags.jsx"
   },
   "dependencies": {
     "favicons-compiled": "*",
