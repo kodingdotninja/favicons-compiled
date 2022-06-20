@@ -8,7 +8,7 @@ function htmltoAstroString(html) {
   return `---\n---\n\n${content}`;
 }
 
-function htmlToReactString(html, { defaultExport = false }) {
+function htmlToReactString(html, { defaultExport = false } = {}) {
   const content = _safeClosingTag(html);
   const exportFn = defaultExport ? "export default" : "export";
   return `// @ts-ignore\n// eslint-disable\n${exportFn} function FaviconsMetaTags() { return <>${content}</>; }`;

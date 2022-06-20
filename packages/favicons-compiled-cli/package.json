@@ -7,7 +7,7 @@
   "homepage": "https://github.com/kodingdotninja/favicons-compiled",
   "bugs": "https://github.com/kodingdotninja/favicons-compiled/issues",
   "bin": {
-    "favicons-compiled": "index.js"
+    "favicons-compiled": "index.cjs"
   },
   "dependencies": {
     "favicons-compiled": "*",

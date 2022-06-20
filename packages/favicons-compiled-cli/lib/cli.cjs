@@ -4,8 +4,8 @@ const { favicons } = require("favicons-compiled");
 const fs = require("fs/promises");
 const path = require("path");
 
-const { htmltoAstroString, htmlToReactString } = require("../utils/convert");
-const arg = require("./arg");
+const { htmltoAstroString, htmlToReactString } = require("../utils/convert.cjs");
+const arg = require("./arg.cjs");
 
 async function cli() {
   try {
